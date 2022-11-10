@@ -59,6 +59,7 @@ public class EmpleadoController {
 		
 		e_seleccionado.setNombre(empleado.getNombre());
 		e_seleccionado.setTrabajo(empleado.getTrabajo());
+		e_seleccionado.setSueldo(empleado.getSueldo());
 
 		
 		e_actualizado = e.actualizarEmpleado(e_seleccionado);

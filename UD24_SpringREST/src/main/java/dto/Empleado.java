@@ -19,6 +19,8 @@ public class Empleado {
 	private String nombre;
 	@Column(name = "trabajo")
 	private String trabajo;
+	@Column(name = "sueldo")
+	private int sueldo;
 	
 	//Constructor vacio
 	public Empleado() {
@@ -26,12 +28,13 @@ public class Empleado {
 	}
 
 	//Constructor con parametros
-	public Empleado(Long id, String nombre, String trabajo) {
+	public Empleado(Long id, String nombre, String trabajo, int sueldo) {
 		this.id = id;
 		this.nombre = nombre;
 		this.trabajo = trabajo;
+		this.sueldo = asignarSueldo();
 	}
-	
+
 	//Getters/Setters
 	public Long getId() {
 		return id;
@@ -57,9 +60,39 @@ public class Empleado {
 		this.trabajo = trabajo;
 	}
 
+	public int getSueldo() {
+		return sueldo;
+	}
+
+	public void setSueldo(int sueldo) {
+		this.sueldo = sueldo;
+	}
+
 	@Override
 	public String toString() {
 		return "Empleado [id=" + id + ", nombre=" + nombre + ", trabajo=" + trabajo + "]";
+	}
+	
+	//Metodo para asignar sueldo segun el trabajo
+	private int asignarSueldo() {
+
+		String trabajo = this.getTrabajo();
+		switch (trabajo) {
+		case "Informatico":
+			return 2000;
+		case "Doctor":
+			return 2100;
+		case "Administrativo":
+			return 1700;
+		case "Profesor":
+			return 1600;
+		case "Repartidor":
+			return 1000;
+		case "Deportista":
+			return 5000;
+		default:
+			return 900;
+		}
 	}
 		
 }
