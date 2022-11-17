@@ -1,9 +1,10 @@
-package dao;
+package com.ud24.dao;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import dto.Empleado;
+
+import com.ud24.dto.Empleado;
 
 public interface IEmpleadoDAO extends JpaRepository<Empleado, Long>{
 

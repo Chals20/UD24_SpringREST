@@ -1,11 +1,11 @@
-package service;
+package com.ud24.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import dto.Empleado;
-import dao.IEmpleadoDAO;
+import com.ud24.dao.IEmpleadoDAO;
+import com.ud24.dto.Empleado;
 
 public class EmpleadoServiceImpl implements IEmpleadoService{
 	

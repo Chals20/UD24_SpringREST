@@ -1,8 +1,8 @@
-package service;
+package com.ud24.service;
 
 import java.util.List;
 
-import dto.Empleado;
+import com.ud24.dto.Empleado;
 
 public interface IEmpleadoService {
 	
